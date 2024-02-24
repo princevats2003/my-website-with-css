@@ -1,0 +1,120 @@
+.nav {
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	width: 100%;
+	text-align: center;
+	padding: 7px;
+	margin-top: 8px;
+	border: 3px solid grey;
+
+}
+
+.border {
+	border: 2px solid white;
+}
+
+.searchbox {
+	margin: 4px;
+	padding: 2px;
+	margin-left: 520px
+
+}
+
+/* h1 {
+	text-align: center;
+	color: whitesmoke;
+	border: 3px solid grey;
+	border-radius: 32px;
+	border-width: 2px;
+	margin-left: 400px;
+	margin-right: 400px;
+	background-color: black;
+
+} */
+
+.img {
+	width: 25px;
+	margin: 0;
+	padding: 0;
+	margin-top: 100px;
+}
+body{
+	padding-bottom: 160px;
+	background-image: url('bodybackground.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+.button
+{
+	color: white;
+	text-decoration: none;
+	border:none;
+}
+
+.form {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+	;
+	gap: 10px;
+}
+
+.form input{
+	padding: 6px;
+	width: 20%;
+	border-radius: 10px;
+}
+
+.form h1{
+	color:#fff;
+}
+
+input[type="button"],.overlay a{
+	background:red;
+	outline:none;
+	border: 1px solid red;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 5px;
+}
+
+input[type="file"]{
+	border: 1px solid #fff;
+}
+
+.overlay{
+	height: 60vh;
+	width: 50vw;
+	background-color: #000;
+	position: absolute;
+	top: 26%;
+	left: 23%;
+	right: 0;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.preview td{
+	display: flex;
+	gap: 10px;
+	font-size: 25px;
+	padding: 10px;
+}
+
+.overlay img{
+	width: 25%;
+}
+

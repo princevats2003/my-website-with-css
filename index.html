@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>My-Website</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div>
+		<nav>
+			<table class="nav">
+				<tr>
+					<td width="20%" class="border"> <a href="index.html" class="button">Home</a></td>
+					<td width="20%" class="border"><a href="contactus.html" class="button">About us</a></td>
+				</tr>
+			</table>
+		</nav>
+	</div>
+
+	<div class="form">
+		<h1>Sign up to use Travel Blog</h1>
+		<input type="text" name="fname" placeholder="enter first name" class="fname" />
+		<input type="text" name="lname" placeholder="enter last name" class="lname" />
+		<input type="email" name="email" placeholder="enter email" class="email" />
+		<input type="file" class="file" />
+		<input type="button" value="Submit" class="btn" />
+	</div>
+
+
+
+	<script>
+		const fname = document.querySelector(".fname");
+		const lname = document.querySelector(".lname");
+		const email = document.querySelector(".email");
+		const file = document.querySelector(".file");
+		const btn = document.querySelector(".btn");
+		var imageSrc = "";
+
+
+
+		function getMarkup(fname, lname, email) {
+			console.log(imageSrc)
+			let htmlMarup = `
+	<div class="overlay">
+		<table border=2px class="preview">
+		<div>
+			<tr>
+				<td>
+					<p>First Name : </p>
+					<p>${fname}</p>
+				</td>
+			</tr>		
+			
+		</div>
+		<div>
+			<tr>
+				<td>
+			<p>Last Name : </p>
+			<p>${lname}</p>
+				</td>
+			</tr>
+		</div>
+		<div>
+			<tr>
+				<td>
+			<p>Email : </p>
+			<p>${lname}</p>
+		</td>
+			</tr>
+		</div>
+		<div>
+			<tr>
+				<td>
+			<p>Profile </p>
+			<img src="${imageSrc}" />
+		</td>
+			</tr>
+	</table>
+	<a class="closeBtn" href="/">Close</a>
+		</div>
+
+	
+	</div>`;
+
+			return htmlMarup;
+		}
+
+
+		file.addEventListener("change", (e) => {
+			const reader = new FileReader();
+
+			reader.onload = function (e) {
+				imageSrc = reader.result
+			}
+
+			reader.readAsDataURL(e.target.files[0])
+		});
+
+		btn.addEventListener("click", () => {
+			let markup = getMarkup(fname.value, lname.value, email.value, imageSrc
+			);
+			const container = document.createElement("div");
+			container.innerHTML = markup;
+			document.body.appendChild(container);
+		});
+
+	
+
+	</script>
+</body>
+
+</html>
